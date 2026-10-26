@@ -1,0 +1,414 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" style="background:#ffffff; font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;">
+  <defs>
+    <!-- Shadow filter -->
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+    <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#ea580c" flood-opacity="0.15"/>
+    </filter>
+    <!-- Gradients -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title & Subtitle Banner -->
+  <g id="HeaderSection">
+    <text x="80" y="58" font-size="34" font-weight="800" fill="#0f172a" letter-spacing="-0.5">M.I.N.E.R.S. SYSTEM ARCHITECTURE</text>
+    <rect x="740" y="32" width="410" height="32" rx="6" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5"/>
+    <text x="752" y="53" font-size="14" font-weight="700" fill="#ea580c">SIH 2026 | PS ID: 26039 | HARDWARE RESCUE PLATFORM</text>
+    <text x="80" y="90" font-size="15" font-weight="600" fill="#64748b">AI-Driven, Communication-Resilient Autonomous Mine Rescue Platform | Safety-Governed Bounded Autonomy</text>
+  </g>
+
+  <!-- Horizontal Pipeline Flow (Sense -> Understand -> Assess -> Decide -> Act -> Communicate -> Update) -->
+  <g id="TopPipeline" transform="translate(80, 115)">
+    <!-- Stage 1 -->
+    <rect x="0" y="0" width="220" height="52" rx="8" fill="#0f172a" stroke="#ea580c" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <text x="110" y="24" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">1. SENSE</text>
+    <text x="110" y="42" font-size="11" font-weight="500" fill="#cbd5e1" text-anchor="middle">Multi-Modal Sensor Suite</text>
+    <polygon points="228,26 238,26 238,20 248,26 238,32 238,26" fill="#94a3b8"/>
+
+    <!-- Stage 2 -->
+    <rect x="256" y="0" width="220" height="52" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <text x="366" y="24" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">2. COMPUTE</text>
+    <text x="366" y="42" font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">Edge Pi5 + NPU + Mega</text>
+    <polygon points="484,26 494,26 494,20 504,26 494,32 494,26" fill="#94a3b8"/>
+
+    <!-- Stage 3 -->
+    <rect x="512" y="0" width="220" height="52" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <text x="622" y="24" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">3. UNDERSTAND</text>
+    <text x="622" y="42" font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">LiDAR SLAM &amp; Vision Fusion</text>
+    <polygon points="740,26 750,26 750,20 760,26 750,32 750,26" fill="#94a3b8"/>
+
+    <!-- Stage 4 -->
+    <rect x="768" y="0" width="220" height="52" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <text x="878" y="24" font-size="13" font-weight="700" fill="#b45309" text-anchor="middle">4. ASSESS</text>
+    <text x="878" y="42" font-size="11" font-weight="600" fill="#92400e" text-anchor="middle">Hazard Index &amp; Governor</text>
+    <polygon points="996,26 1006,26 1006,20 1016,26 1006,32 1006,26" fill="#94a3b8"/>
+
+    <!-- Stage 5 -->
+    <rect x="1024" y="0" width="220" height="52" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <text x="1134" y="24" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">5. DECIDE</text>
+    <text x="1134" y="42" font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">Frontier Nav &amp; Blackbox SD</text>
+    <polygon points="1252,26 1262,26 1262,20 1272,26 1262,32 1262,26" fill="#94a3b8"/>
+
+    <!-- Stage 6 -->
+    <rect x="1280" y="0" width="220" height="52" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <text x="1390" y="24" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">6. ACT</text>
+    <text x="1390" y="42" font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">4WD Motors &amp; Relay Mesh</text>
+    <polygon points="1508,26 1518,26 1518,20 1528,26 1518,32 1518,26" fill="#94a3b8"/>
+
+    <!-- Stage 7 -->
+    <rect x="1536" y="0" width="224" height="52" rx="8" fill="#0f172a" stroke="#3b82f6" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <text x="1648" y="24" font-size="13" font-weight="700" fill="#60a5fa" text-anchor="middle">7. RESCUE</text>
+    <text x="1648" y="42" font-size="11" font-weight="500" fill="#94a3b8" text-anchor="middle">Surface Command Station</text>
+  </g>
+
+  <!-- Main 6 Columns Architecture Area -->
+  <!-- Column Width: 275px, Gap: 22px -->
+
+  <!-- COLUMN 1: SENSING LAYER -->
+  <g id="Col1" transform="translate(80, 195)">
+    <rect x="0" y="0" width="275" height="650" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2" filter="url(#cardShadow)"/>
+    <!-- Header Badge -->
+    <rect x="10" y="10" width="255" height="58" rx="8" fill="#2563eb"/>
+    <text x="137" y="34" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">1. MULTI-MODAL SENSING</text>
+    <text x="137" y="54" font-size="12" font-weight="600" fill="#dbeafe" text-anchor="middle">“Sense the Mine”</text>
+
+    <!-- Cards -->
+    <!-- Card 1 -->
+    <rect x="10" y="78" width="255" height="72" rx="8" fill="#ffffff" stroke="#dbeafe" stroke-width="1.5"/>
+    <text x="22" y="100" font-size="13" font-weight="700" fill="#0f172a">📡 360° 2D LiDAR</text>
+    <text x="22" y="120" font-size="11" fill="#64748b">Tunnel contour mapping, boundary walls</text>
+    <text x="22" y="136" font-size="10" font-weight="600" fill="#2563eb">• Redundant obstacle distance scanning</text>
+
+    <!-- Card 2 -->
+    <rect x="10" y="158" width="255" height="72" rx="8" fill="#ffffff" stroke="#dbeafe" stroke-width="1.5"/>
+    <text x="22" y="180" font-size="13" font-weight="700" fill="#0f172a">📷 Stereo RGB-D Camera</text>
+    <text x="22" y="200" font-size="11" fill="#64748b">Both visual inspection &amp; depth map</text>
+    <text x="22" y="216" font-size="10" font-weight="600" fill="#2563eb">• Disparity map, passage clearance</text>
+
+    <!-- Card 3 -->
+    <rect x="10" y="238" width="255" height="72" rx="8" fill="#ffffff" stroke="#dbeafe" stroke-width="1.5"/>
+    <text x="22" y="260" font-size="13" font-weight="700" fill="#0f172a">🔥 Thermal Infrared Camera</text>
+    <text x="22" y="280" font-size="11" fill="#64748b">Body heat signatures through dark/smoke</text>
+    <text x="22" y="296" font-size="10" font-weight="600" fill="#2563eb">• Survivor temperature contrast</text>
+
+    <!-- Card 4 -->
+    <rect x="10" y="318" width="255" height="72" rx="8" fill="#ffffff" stroke="#dbeafe" stroke-width="1.5"/>
+    <text x="22" y="340" font-size="13" font-weight="700" fill="#0f172a">🧪 Multi-Gas Sensor Array</text>
+    <text x="22" y="360" font-size="11" fill="#64748b">CH4, CO, CO2, O2, Flammable/Toxic</text>
+    <text x="22" y="376" font-size="10" font-weight="600" fill="#2563eb">• Fast threshold alarm reporting</text>
+
+    <!-- Card 5 -->
+    <rect x="10" y="398" width="255" height="72" rx="8" fill="#ffffff" stroke="#dbeafe" stroke-width="1.5"/>
+    <text x="22" y="420" font-size="13" font-weight="700" fill="#0f172a">🌡️ Environmental Sensors</text>
+    <text x="22" y="440" font-size="11" fill="#64748b">Ambient temp, humidity, dust, airflow</text>
+    <text x="22" y="456" font-size="10" font-weight="600" fill="#2563eb">• Mine atmospheric condition tracking</text>
+
+    <!-- Card 6 -->
+    <rect x="10" y="478" width="255" height="72" rx="8" fill="#ffffff" stroke="#dbeafe" stroke-width="1.5"/>
+    <text x="22" y="500" font-size="13" font-weight="700" fill="#0f172a">🔊 Ultrasonic Sensors</text>
+    <text x="22" y="520" font-size="11" fill="#64748b">Short-range blind spot safety redundancy</text>
+    <text x="22" y="536" font-size="10" font-weight="600" fill="#2563eb">• Water puddle &amp; cliff drop detection</text>
+
+    <!-- Card 7 -->
+    <rect x="10" y="558" width="255" height="80" rx="8" fill="#ffffff" stroke="#dbeafe" stroke-width="1.5"/>
+    <text x="22" y="580" font-size="13" font-weight="700" fill="#0f172a">🧭 IMU + Wheel Encoders</text>
+    <text x="22" y="600" font-size="11" fill="#64748b">6-DOF pitch/roll &amp; wheel odometry</text>
+    <text x="22" y="616" font-size="10" font-weight="600" fill="#2563eb">• Slip-aware dead reckoning in zero-GPS</text>
+  </g>
+
+  <!-- COLUMN 2: EDGE COMPUTING LAYER -->
+  <g id="Col2" transform="translate(377, 195)">
+    <rect x="0" y="0" width="275" height="650" rx="12" fill="#ecfeff" stroke="#a5f3fc" stroke-width="2" filter="url(#cardShadow)"/>
+    <!-- Header Badge -->
+    <rect x="10" y="10" width="255" height="58" rx="8" fill="#0891b2"/>
+    <text x="137" y="34" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">2. EDGE COMPUTING LAYER</text>
+    <text x="137" y="54" font-size="12" font-weight="600" fill="#cffafe" text-anchor="middle">“Process at the Edge”</text>
+
+    <!-- Card 1 -->
+    <rect x="10" y="78" width="255" height="100" rx="8" fill="#ffffff" stroke="#cffafe" stroke-width="1.5"/>
+    <text x="22" y="102" font-size="13" font-weight="700" fill="#0f172a">🧠 Raspberry Pi 5 (8GB)</text>
+    <text x="22" y="122" font-size="11" fill="#64748b">Master Controller &amp; Edge Host</text>
+    <text x="22" y="140" font-size="10.5" fill="#334155">• ROS2 node management &amp; logging</text>
+    <text x="22" y="156" font-size="10.5" fill="#334155">• Real-time multi-threaded architecture</text>
+    <text x="22" y="170" font-size="10" font-weight="600" fill="#0891b2">• Store-and-forward database</text>
+
+    <!-- Card 2 -->
+    <rect x="10" y="188" width="255" height="100" rx="8" fill="#ffffff" stroke="#cffafe" stroke-width="1.5"/>
+    <text x="22" y="212" font-size="13" font-weight="700" fill="#0f172a">⚡ Raspberry Pi AI HAT+</text>
+    <text x="22" y="232" font-size="11" fill="#64748b">26 TOPS Dedicated Neural NPU</text>
+    <text x="22" y="250" font-size="10.5" fill="#334155">• On-device real-time computer vision</text>
+    <text x="22" y="266" font-size="10.5" fill="#334155">• Thermal/RGB CNN inference</text>
+    <text x="22" y="280" font-size="10" font-weight="600" fill="#0891b2">• Zero-latency survivor classification</text>
+
+    <!-- Card 3 -->
+    <rect x="10" y="298" width="255" height="100" rx="8" fill="#ffffff" stroke="#cffafe" stroke-width="1.5"/>
+    <text x="22" y="322" font-size="13" font-weight="700" fill="#0f172a">⚙️ Arduino Mega 2560</text>
+    <text x="22" y="342" font-size="11" fill="#64748b">Deterministic Microcontroller</text>
+    <text x="22" y="360" font-size="10.5" fill="#334155">• Hard real-time motor PWM control</text>
+    <text x="22" y="376" font-size="10.5" fill="#334155">• Analog gas sensor ADC acquisition</text>
+    <text x="22" y="390" font-size="10" font-weight="600" fill="#0891b2">• Hardware safety kill-switch watcher</text>
+
+    <!-- Card 4 -->
+    <rect x="10" y="408" width="255" height="110" rx="8" fill="#ffffff" stroke="#cffafe" stroke-width="1.5"/>
+    <text x="22" y="432" font-size="13" font-weight="700" fill="#0f172a">🔋 Regulated Power &amp; BMS</text>
+    <text x="22" y="452" font-size="11" fill="#64748b">Dual Rail Isolated Power Unit</text>
+    <text x="22" y="470" font-size="10.5" fill="#334155">• 12V High-current motor drivers</text>
+    <text x="22" y="486" font-size="10.5" fill="#334155">• 5V Clean logic rail for Pi5 &amp; sensors</text>
+    <text x="22" y="502" font-size="10" font-weight="600" fill="#0891b2">• Voltage/Current telemetry monitor</text>
+
+    <!-- Card 5 -->
+    <rect x="10" y="528" width="255" height="110" rx="8" fill="#ffffff" stroke="#cffafe" stroke-width="1.5"/>
+    <text x="22" y="552" font-size="13" font-weight="700" fill="#0f172a">🛡️ Communication &amp; Storage</text>
+    <text x="22" y="572" font-size="11" fill="#64748b">Resilience Hardware Modules</text>
+    <text x="22" y="590" font-size="10.5" fill="#334155">• Long-range Wi-Fi transceiver</text>
+    <text x="22" y="606" font-size="10.5" fill="#334155">• Breadcrumb dropper release servo</text>
+    <text x="22" y="622" font-size="10" font-weight="600" fill="#0891b2">• High-speed SD blackbox mission buffer</text>
+  </g>
+
+  <!-- COLUMN 3: AI PERCEPTION & SENSOR FUSION -->
+  <g id="Col3" transform="translate(674, 195)">
+    <rect x="0" y="0" width="275" height="650" rx="12" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="2" filter="url(#cardShadow)"/>
+    <!-- Header Badge -->
+    <rect x="10" y="10" width="255" height="58" rx="8" fill="#7c3aed"/>
+    <text x="137" y="34" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">3. AI &amp; SENSOR FUSION</text>
+    <text x="137" y="54" font-size="12" font-weight="600" fill="#ede9fe" text-anchor="middle">“Understand the Mine”</text>
+
+    <!-- Card 1 -->
+    <rect x="10" y="78" width="255" height="100" rx="8" fill="#ffffff" stroke="#ede9fe" stroke-width="1.5"/>
+    <text x="22" y="102" font-size="13" font-weight="700" fill="#0f172a">🗺️ 2D LiDAR SLAM</text>
+    <text x="22" y="122" font-size="11" fill="#64748b">Real-Time Occupancy Grid</text>
+    <text x="22" y="140" font-size="10.5" fill="#334155">• Fast-LIO / Cartographer 2D grid</text>
+    <text x="22" y="156" font-size="10.5" fill="#334155">• Boundary extraction &amp; walls</text>
+    <text x="22" y="170" font-size="10" font-weight="600" fill="#7c3aed">• Dynamic structural shift alerts</text>
+
+    <!-- Card 2 -->
+    <rect x="10" y="188" width="255" height="100" rx="8" fill="#ffffff" stroke="#ede9fe" stroke-width="1.5"/>
+    <text x="22" y="212" font-size="13" font-weight="700" fill="#0f172a">👁️ Stereo Depth Fusion</text>
+    <text x="22" y="232" font-size="11" fill="#64748b">Traversability &amp; Gap Analysis</text>
+    <text x="22" y="250" font-size="10.5" fill="#334155">• Real-time point-cloud reprojection</text>
+    <text x="22" y="266" font-size="10.5" fill="#334155">• Clearance corridor classification</text>
+    <text x="22" y="280" font-size="10" font-weight="600" fill="#7c3aed">• Loose rubble &amp; obstacle avoidance</text>
+
+    <!-- Card 3 -->
+    <rect x="10" y="298" width="255" height="100" rx="8" fill="#ffffff" stroke="#ede9fe" stroke-width="1.5"/>
+    <text x="22" y="322" font-size="13" font-weight="700" fill="#0f172a">🔥 Thermal + RGB Fusion</text>
+    <text x="22" y="342" font-size="11" fill="#64748b">Zero-Visibility Survivor Spotting</text>
+    <text x="22" y="360" font-size="10.5" fill="#334155">• Dual-spectrum heatmap alignment</text>
+    <text x="22" y="376" font-size="10.5" fill="#334155">• Penetrates dense coal dust/smoke</text>
+    <text x="22" y="390" font-size="10" font-weight="600" fill="#7c3aed">• Body heat centroid verification</text>
+
+    <!-- Card 4 -->
+    <rect x="10" y="408" width="255" height="110" rx="8" fill="#ffffff" stroke="#ede9fe" stroke-width="1.5"/>
+    <text x="22" y="432" font-size="13" font-weight="700" fill="#0f172a">🧍 AI Person &amp; Posture</text>
+    <text x="22" y="452" font-size="11" fill="#64748b">YOLOv8 Edge Acceleration</text>
+    <text x="22" y="470" font-size="10.5" fill="#334155">• Human body keypoint detection</text>
+    <text x="22" y="486" font-size="10.5" fill="#334155">• Posture: Lying / Trapped / Standing</text>
+    <text x="22" y="502" font-size="10" font-weight="600" fill="#7c3aed">• Temporal confidence verification</text>
+
+    <!-- Card 5 -->
+    <rect x="10" y="528" width="255" height="110" rx="8" fill="#ffffff" stroke="#ede9fe" stroke-width="1.5"/>
+    <text x="22" y="552" font-size="13" font-weight="700" fill="#0f172a">🌫️ Toxic Zone Heatmap</text>
+    <text x="22" y="572" font-size="11" fill="#64748b">Environmental Spatial Modeling</text>
+    <text x="22" y="590" font-size="10.5" fill="#334155">• Gas concentration interpolator</text>
+    <text x="22" y="606" font-size="10.5" fill="#334155">• Explosive limit warning zones</text>
+    <text x="22" y="622" font-size="10" font-weight="600" fill="#7c3aed">• Dynamic tunnel hazard projection</text>
+  </g>
+
+  <!-- COLUMN 4: RISK ASSESSMENT & SAFETY GOVERNOR -->
+  <g id="Col4" transform="translate(971, 195)">
+    <rect x="0" y="0" width="275" height="650" rx="12" fill="#fef3c7" stroke="#fde68a" stroke-width="2" filter="url(#cardShadow)"/>
+    <!-- Header Badge -->
+    <rect x="10" y="10" width="255" height="58" rx="8" fill="#d97706"/>
+    <text x="137" y="34" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">4. RISK &amp; GOVERNOR</text>
+    <text x="137" y="54" font-size="12" font-weight="600" fill="#fef3c7" text-anchor="middle">“Assess Safety”</text>
+
+    <!-- Card 1 -->
+    <rect x="10" y="78" width="255" height="100" rx="8" fill="#ffffff" stroke="#fde68a" stroke-width="1.5"/>
+    <text x="22" y="102" font-size="13" font-weight="700" fill="#0f172a">📊 Tunnel Hazard Index</text>
+    <text x="22" y="122" font-size="11" fill="#64748b">Composite Dynamic Danger Metric</text>
+    <text x="22" y="140" font-size="10.5" fill="#334155">• Weighting: Gas + Heat + Blockage</text>
+    <text x="22" y="156" font-size="10.5" fill="#334155">• Categorization: Safe / Caution / Danger</text>
+    <text x="22" y="170" font-size="10" font-weight="600" fill="#d97706">• Automatic mission risk adjustment</text>
+
+    <!-- Card 2 -->
+    <rect x="10" y="188" width="255" height="100" rx="8" fill="#ffffff" stroke="#fde68a" stroke-width="1.5"/>
+    <text x="22" y="212" font-size="13" font-weight="700" fill="#0f172a">🚷 Drop-Off &amp; Slip Guard</text>
+    <text x="22" y="232" font-size="11" fill="#64748b">Terrain Physical Risk Evaluation</text>
+    <text x="22" y="250" font-size="10.5" fill="#334155">• Steep slope / pit edge detection</text>
+    <text x="22" y="266" font-size="10.5" fill="#334155">• Deep puddle &amp; water accumulation</text>
+    <text x="22" y="280" font-size="10" font-weight="600" fill="#d97706">• Prevents rover tip-over &amp; drowning</text>
+
+    <!-- Card 3 -->
+    <rect x="10" y="298" width="255" height="120" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+    <text x="22" y="322" font-size="13" font-weight="800" fill="#b45309">🛡️ SAFETY GOVERNOR</text>
+    <text x="22" y="340" font-size="11" font-weight="600" fill="#78350f">Hard Safety Rule Constraints</text>
+    <text x="22" y="358" font-size="10.5" font-weight="600" fill="#0f172a">• Overrides AI path suggestions</text>
+    <text x="22" y="374" font-size="10.5" fill="#334155">• Enforces hard stop on gas burst</text>
+    <text x="22" y="390" font-size="10.5" fill="#334155">• Never trusts AI hallucinations</text>
+    <text x="22" y="406" font-size="10" font-weight="700" fill="#b45309">• Hardcoded recovery procedures</text>
+
+    <!-- Card 4 -->
+    <rect x="10" y="428" width="255" height="100" rx="8" fill="#ffffff" stroke="#fde68a" stroke-width="1.5"/>
+    <text x="22" y="452" font-size="13" font-weight="700" fill="#0f172a">↩️ Safe Auto-Rollback</text>
+    <text x="22" y="472" font-size="11" fill="#64748b">Emergency Retreat Behavior</text>
+    <text x="22" y="490" font-size="10.5" fill="#334155">• Backtracks exact proven safe path</text>
+    <text x="22" y="506" font-size="10.5" fill="#334155">• Triggered on structural roof cracks</text>
+    <text x="22" y="520" font-size="10" font-weight="600" fill="#d97706">• Guarantees rover survivability</text>
+
+    <!-- Card 5 -->
+    <rect x="10" y="538" width="255" height="100" rx="8" fill="#ffffff" stroke="#fde68a" stroke-width="1.5"/>
+    <text x="22" y="562" font-size="13" font-weight="700" fill="#0f172a">💾 Blackbox SD Logging</text>
+    <text x="22" y="582" font-size="11" fill="#64748b">Store-and-Forward Mission Data</text>
+    <text x="22" y="600" font-size="10.5" fill="#334155">• High-frequency sensor flight recorder</text>
+    <text x="22" y="616" font-size="10.5" fill="#334155">• Synchronizes when link is restored</text>
+    <text x="22" y="630" font-size="10" font-weight="600" fill="#d97706">• Zero mission data loss guaranteed</text>
+  </g>
+
+  <!-- COLUMN 5: AUTONOMY & NAVIGATION -->
+  <g id="Col5" transform="translate(1268, 195)">
+    <rect x="0" y="0" width="275" height="650" rx="12" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="2" filter="url(#cardShadow)"/>
+    <!-- Header Badge -->
+    <rect x="10" y="10" width="255" height="58" rx="8" fill="#10b981"/>
+    <text x="137" y="34" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">5. MISSION &amp; AUTONOMY</text>
+    <text x="137" y="54" font-size="12" font-weight="600" fill="#d1fae5" text-anchor="middle">“Decide &amp; Plan”</text>
+
+    <!-- Card 1 -->
+    <rect x="10" y="78" width="255" height="100" rx="8" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.5"/>
+    <text x="22" y="102" font-size="13" font-weight="700" fill="#0f172a">🧭 Frontier Exploration</text>
+    <text x="22" y="122" font-size="11" fill="#64748b">Autonomous Waypoint Planning</text>
+    <text x="22" y="140" font-size="10.5" fill="#334155">• Explores unknown mine tunnels</text>
+    <text x="22" y="156" font-size="10.5" fill="#334155">• Continuous graph-based pathing</text>
+    <text x="22" y="170" font-size="10" font-weight="600" fill="#10b981">• Evaluates branching tunnel forks</text>
+
+    <!-- Card 2 -->
+    <rect x="10" y="188" width="255" height="100" rx="8" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.5"/>
+    <text x="22" y="212" font-size="13" font-weight="700" fill="#0f172a">🗺️ Risk-Aware A* / D*</text>
+    <text x="22" y="232" font-size="11" fill="#64748b">Cost-Map Route Optimization</text>
+    <text x="22" y="250" font-size="10.5" fill="#334155">• Toxic gas treated as high cost wall</text>
+    <text x="22" y="266" font-size="10.5" fill="#334155">• Navigates cleanest passage corridor</text>
+    <text x="22" y="280" font-size="10" font-weight="600" fill="#10b981">• Dynamic replanning around debris</text>
+
+    <!-- Card 3 -->
+    <rect x="10" y="298" width="255" height="110" rx="8" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.5"/>
+    <text x="22" y="322" font-size="13" font-weight="700" fill="#0f172a">⏱️ Bounded Autonomy</text>
+    <text x="22" y="342" font-size="11" fill="#64748b">Strict Signal-Loss Protocol</text>
+    <text x="22" y="360" font-size="10.5" fill="#334155">• Operates within time &amp; meter fences</text>
+    <text x="22" y="376" font-size="10.5" fill="#334155">• Prevents rogue or runaway rover</text>
+    <text x="22" y="392" font-size="10" font-weight="600" fill="#10b981">• SIH Evaluation: Credible Autonomy</text>
+
+    <!-- Card 4 -->
+    <rect x="10" y="418" width="255" height="100" rx="8" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.5"/>
+    <text x="22" y="442" font-size="13" font-weight="700" fill="#0f172a">🔙 Auto-Return Timer</text>
+    <text x="22" y="462" font-size="11" fill="#64748b">Automatic Link Reconnection</text>
+    <text x="22" y="480" font-size="10.5" fill="#334155">• On watchdog timer expiry</text>
+    <text x="22" y="496" font-size="10.5" fill="#334155">• Reverses back to last known radio link</text>
+    <text x="22" y="510" font-size="10" font-weight="600" fill="#10b981">• Dumps stored telemetry to base</text>
+
+    <!-- Card 5 -->
+    <rect x="10" y="528" width="255" height="110" rx="8" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.5"/>
+    <text x="22" y="552" font-size="13" font-weight="700" fill="#0f172a">⚡ Energy-Aware Planner</text>
+    <text x="22" y="572" font-size="11" fill="#64748b">Battery Management Optimization</text>
+    <text x="22" y="590" font-size="10.5" fill="#334155">• Reserves 30% battery for return trip</text>
+    <text x="22" y="606" font-size="10.5" fill="#334155">• Shuts off high-draw sensors when idle</text>
+    <text x="22" y="622" font-size="10" font-weight="600" fill="#10b981">• Maximizes search penetration depth</text>
+  </g>
+
+  <!-- COLUMN 6: ROVER ACTUATION & HARDWARE -->
+  <g id="Col6" transform="translate(1565, 195)">
+    <rect x="0" y="0" width="275" height="650" rx="12" fill="#fff7ed" stroke="#fed7aa" stroke-width="2" filter="url(#cardShadow)"/>
+    <!-- Header Badge -->
+    <rect x="10" y="10" width="255" height="58" rx="8" fill="#ea580c"/>
+    <text x="137" y="34" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">6. ROVER ACTUATION</text>
+    <text x="137" y="54" font-size="12" font-weight="600" fill="#ffedd5" text-anchor="middle">“Act &amp; Explore”</text>
+
+    <!-- Card 1 -->
+    <rect x="10" y="78" width="255" height="100" rx="8" fill="#ffffff" stroke="#fed7aa" stroke-width="1.5"/>
+    <text x="22" y="102" font-size="13" font-weight="700" fill="#0f172a">🚜 4WD Heavy Chassis</text>
+    <text x="22" y="122" font-size="11" fill="#64748b">Rugged Underground Mobility</text>
+    <text x="22" y="140" font-size="10.5" fill="#334155">• 12V High-torque metal geared DC motors</text>
+    <text x="22" y="156" font-size="10.5" fill="#334155">• Skid-steer zero-radius turning</text>
+    <text x="22" y="170" font-size="10" font-weight="600" fill="#ea580c">• Mud &amp; coal rubble treaded wheels</text>
+
+    <!-- Card 2 -->
+    <rect x="10" y="188" width="255" height="100" rx="8" fill="#ffffff" stroke="#fed7aa" stroke-width="1.5"/>
+    <text x="22" y="212" font-size="13" font-weight="700" fill="#0f172a">⚡ BTS7960 Motor Drivers</text>
+    <text x="22" y="232" font-size="11" fill="#64748b">43A High-Current Dual H-Bridge</text>
+    <text x="22" y="250" font-size="10.5" fill="#334155">• Over-current &amp; thermal protection</text>
+    <text x="22" y="266" font-size="10.5" fill="#334155">• Smooth ramp-up velocity profiles</text>
+    <text x="22" y="280" font-size="10" font-weight="600" fill="#ea580c">• Handles motor stall on steep rocks</text>
+
+    <!-- Card 3 -->
+    <rect x="10" y="298" width="255" height="100" rx="8" fill="#ffffff" stroke="#fed7aa" stroke-width="1.5"/>
+    <text x="22" y="322" font-size="13" font-weight="700" fill="#0f172a">🎯 Pan-Tilt Camera Gimbal</text>
+    <text x="22" y="342" font-size="11" fill="#64748b">2-DOF Servo Articulated Head</text>
+    <text x="22" y="360" font-size="10.5" fill="#334155">• 180° Pan &amp; 90° Tilt coverage</text>
+    <text x="22" y="376" font-size="10.5" fill="#334155">• Inspects tunnel ceilings &amp; crevasses</text>
+    <text x="22" y="390" font-size="10" font-weight="600" fill="#ea580c">• Tracks survivors automatically</text>
+
+    <!-- Card 4 -->
+    <rect x="10" y="408" width="255" height="110" rx="8" fill="#ffffff" stroke="#fed7aa" stroke-width="1.5"/>
+    <text x="22" y="432" font-size="13" font-weight="700" fill="#0f172a">📡 Breadcrumb Dispenser</text>
+    <text x="22" y="452" font-size="11" fill="#64748b">Deployable Wireless Mesh Nodes</text>
+    <text x="22" y="470" font-size="10.5" fill="#334155">• Drops repeater nodes at tunnel bends</text>
+    <text x="22" y="486" font-size="10.5" fill="#334155">• Extends wireless link deep into mine</text>
+    <text x="22" y="502" font-size="10" font-weight="600" fill="#ea580c">• Self-healing mesh topology</text>
+
+    <!-- Card 5 -->
+    <rect x="10" y="528" width="255" height="110" rx="8" fill="#ffffff" stroke="#fed7aa" stroke-width="1.5"/>
+    <text x="22" y="552" font-size="13" font-weight="700" fill="#0f172a">🚨 Beacon &amp; Safety Strobe</text>
+    <text x="22" y="572" font-size="11" fill="#64748b">Survivor Acoustic &amp; Visual Beacon</text>
+    <text x="22" y="590" font-size="10.5" fill="#334155">• High-candela flashing LED strobe</text>
+    <text x="22" y="606" font-size="10.5" fill="#334155">• 95dB Piezo acoustic sounder</text>
+    <text x="22" y="622" font-size="10" font-weight="600" fill="#ea580c">• Guides trapped miners toward rover</text>
+  </g>
+
+  <!-- BOTTOM INTEGRATION LAYER: SURFACE RESCUE DASHBOARD -->
+  <g id="BottomDashboard" transform="translate(80, 865)">
+    <rect x="0" y="0" width="1760" height="165" rx="12" fill="#0f172a" stroke="#ea580c" stroke-width="2.5" filter="url(#cardShadow)"/>
+    
+    <!-- Title Badge -->
+    <rect x="20" y="16" width="460" height="32" rx="6" fill="#ea580c"/>
+    <text x="32" y="38" font-size="13" font-weight="800" fill="#ffffff" letter-spacing="0.5">SURFACE RESCUE TEAM DASHBOARD &amp; BASE STATION</text>
+    <text x="500" y="38" font-size="13" font-weight="700" fill="#fed7aa">“Communicate &amp; Rescue — AI Assists Detection, Rescue Team Makes Final Decision”</text>
+
+    <!-- 5 Live Station Modules -->
+    <!-- Module 1 -->
+    <rect x="20" y="60" width="330" height="85" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="35" y="86" font-size="13" font-weight="700" fill="#38bdf8">🗺️ Live 2D Map &amp; Gas Heatmap</text>
+    <text x="35" y="108" font-size="11" fill="#94a3b8">Real-time tunnel grid with colorized hazard overlays</text>
+    <text x="35" y="126" font-size="10.5" font-weight="600" fill="#cbd5e1">• Explosive limit indicators (CH4 / CO / O2)</text>
+
+    <!-- Module 2 -->
+    <rect x="372" y="60" width="330" height="85" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="387" y="86" font-size="13" font-weight="700" fill="#f43f5e">📹 Low-Latency Video + Thermal</text>
+    <text x="387" y="108" font-size="11" fill="#94a3b8">Integrated RGB stream with thermal IR overlay</text>
+    <text x="387" y="126" font-size="10.5" font-weight="600" fill="#cbd5e1">• Pan-tilt camera controls &amp; zoom</text>
+
+    <!-- Module 3 -->
+    <rect x="724" y="60" width="330" height="85" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="739" y="86" font-size="13" font-weight="700" fill="#4ade80">📡 Mesh Signal &amp; Link Health</text>
+    <text x="739" y="108" font-size="11" fill="#94a3b8">Breadcrumb node link status &amp; RSSI telemetry</text>
+    <text x="739" y="126" font-size="10.5" font-weight="600" fill="#cbd5e1">• Auto store-and-forward sync status</text>
+
+    <!-- Module 4 -->
+    <rect x="1076" y="60" width="330" height="85" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="1091" y="86" font-size="13" font-weight="700" fill="#fbbf24">🚨 Survivor Markers &amp; Log</text>
+    <text x="1091" y="108" font-size="11" fill="#94a3b8">Timestamped victim location pins &amp; posture state</text>
+    <text x="1091" y="126" font-size="10.5" font-weight="600" fill="#cbd5e1">• High-priority rescue route extraction</text>
+
+    <!-- Module 5 -->
+    <rect x="1428" y="60" width="312" height="85" rx="8" fill="#1e293b" stroke="#ea580c" stroke-width="1.5"/>
+    <text x="1443" y="86" font-size="13" font-weight="700" fill="#f97316">🕹️ Manual Emergency Override</text>
+    <text x="1443" y="108" font-size="11" fill="#94a3b8">Immediate E-STOP &amp; teleoperation control</text>
+    <text x="1443" y="126" font-size="10.5" font-weight="600" fill="#fca5a5">• Safety Governor hard-stop release button</text>
+  </g>
+</svg>

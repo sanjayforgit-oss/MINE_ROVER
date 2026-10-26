@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" style="background:#ffffff; font-family:'Segoe UI', -apple-system, Roboto, sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Title & Header -->
+  <g transform="translate(100, 60)">
+    <text x="0" y="36" font-size="34" font-weight="800" fill="#0f172a" letter-spacing="-0.5">SYSTEM ARCHITECTURE &amp; TECHNICAL FLOW</text>
+    <rect x="740" y="10" width="420" height="34" rx="6" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5"/>
+    <text x="752" y="33" font-size="14" font-weight="700" fill="#ea580c">SIH 2026 | PS ID: 26039 | HARDWARE RESCUE PLATFORM</text>
+    <text x="0" y="68" font-size="16" font-weight="600" fill="#64748b">M.I.N.E.R.S. — Mobile Intelligent Navigation and Emergency Rescue System | Safety-Governed Bounded Autonomy</text>
+  </g>
+
+  <!-- 3 Main Pillars (Clean, Human-Made Hackathon Style) -->
+
+  <!-- Pillar 1: Cyan Container -->
+  <g transform="translate(100, 160)">
+    <rect x="0" y="0" width="550" height="640" rx="16" fill="#cffafe" stroke="#22d3ee" stroke-width="2.5" filter="url(#shadow)"/>
+    <text x="32" y="52" font-size="22" font-weight="800" fill="#0e7490">01. MULTI-MODAL SENSING</text>
+    <text x="32" y="80" font-size="14" font-weight="600" fill="#0891b2">Environmental &amp; Spatial Perception Suite</text>
+
+    <!-- Point 1 -->
+    <g transform="translate(32, 115)">
+      <rect x="0" y="0" width="486" height="85" rx="10" fill="#ffffff" stroke="#a5f3fc" stroke-width="1.5"/>
+      <text x="20" y="28" font-size="15" font-weight="800" fill="#0f172a">📡 360° 2D LiDAR</text>
+      <text x="20" y="52" font-size="13" fill="#475569">Continuous 2D tunnel mapping &amp; boundary obstacle detection.</text>
+      <text x="20" y="70" font-size="12" font-weight="600" fill="#0284c7">• Strict design constraint: No expensive/fragile 3D LiDAR.</text>
+    </g>
+
+    <!-- Point 2 -->
+    <g transform="translate(32, 215)">
+      <rect x="0" y="0" width="486" height="85" rx="10" fill="#ffffff" stroke="#a5f3fc" stroke-width="1.5"/>
+      <text x="20" y="28" font-size="15" font-weight="800" fill="#0f172a">📷 Stereo RGB-D Camera</text>
+      <text x="20" y="52" font-size="13" fill="#475569">Unified camera for real-time video stream &amp; depth estimation.</text>
+      <text x="20" y="70" font-size="12" font-weight="600" fill="#0284c7">• Resolves tunnel traversability, rock falls &amp; gap clearance.</text>
+    </g>
+
+    <!-- Point 3 -->
+    <g transform="translate(32, 315)">
+      <rect x="0" y="0" width="486" height="85" rx="10" fill="#ffffff" stroke="#a5f3fc" stroke-width="1.5"/>
+      <text x="20" y="28" font-size="15" font-weight="800" fill="#0f172a">🔥 Thermal Infrared Camera</text>
+      <text x="20" y="52" font-size="13" fill="#475569">Detects survivor body heat signatures through zero-visibility.</text>
+      <text x="20" y="70" font-size="12" font-weight="600" fill="#0284c7">• Unaffected by heavy coal dust, haze, or complete darkness.</text>
+    </g>
+
+    <!-- Point 4 -->
+    <g transform="translate(32, 415)">
+      <rect x="0" y="0" width="486" height="85" rx="10" fill="#ffffff" stroke="#a5f3fc" stroke-width="1.5"/>
+      <text x="20" y="28" font-size="15" font-weight="800" fill="#0f172a">🧪 Multi-Gas Sensor Array</text>
+      <text x="20" y="52" font-size="13" fill="#475569">Real-time concentration tracking: CH4, CO, CO2, O2, and Smoke.</text>
+      <text x="20" y="70" font-size="12" font-weight="600" fill="#0284c7">• Instant threshold warning before entering explosive zones.</text>
+    </g>
+
+    <!-- Point 5 -->
+    <g transform="translate(32, 515)">
+      <rect x="0" y="0" width="486" height="95" rx="10" fill="#ffffff" stroke="#a5f3fc" stroke-width="1.5"/>
+      <text x="20" y="28" font-size="15" font-weight="800" fill="#0f172a">🧭 Slip-Aware IMU &amp; Wheel Encoders</text>
+      <text x="20" y="52" font-size="13" fill="#475569">6-DOF pitch/roll and wheel odometry for dead reckoning.</text>
+      <text x="20" y="72" font-size="12" font-weight="600" fill="#0284c7">• Detects wheel slip on wet coal slurry and prevents rover rollover.</text>
+      <text x="20" y="88" font-size="11" fill="#64748b">• Ultrasonic sensors provide short-range puddle/water backup.</text>
+    </g>
+  </g>
+
+  <!-- Pillar 2: Purple Container -->
+  <g transform="translate(685, 160)">
+    <rect x="0" y="0" width="550" height="640" rx="16" fill="#f3e8ff" stroke="#c084fc" stroke-width="2.5" filter="url(#shadow)"/>
+    <text x="32" y="52" font-size="22" font-weight="800" fill="#6b21a8">02. INTELLIGENT EDGE BRAIN</text>
+    <text x="32" y="80" font-size="14" font-weight="600" fill="#7e22ce">Onboard AI &amp; Real-Time Compute</text>
+
+    <!-- Point 1 -->
+    <g transform="translate(32, 115)">
+      <rect x="0" y="0" width="486" height="110" rx="10" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.5"/>
+      <text x="20" y="28" font-size="15" font-weight="800" fill="#0f172a">🧠 Raspberry Pi 5 (8GB)</text>
+      <text x="20" y="52" font-size="13" fill="#475569">Master high-level computing node running ROS2 &amp; Linux.</text>
+      <text x="20" y="74" font-size="12" font-weight="600" fill="#7c3aed">• Multi-sensor synchronization and real-time mapping.</text>
+      <text x="20" y="94" font-size="12" fill="#64748b">• Store-and-forward mission telemetry database host.</text>
+    </g>
+
+    <!-- Point 2 -->
+    <g transform="translate(32, 240)">
+      <rect x="0" y="0" width="486" height="110" rx="10" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.5"/>
+      <text x="20" y="28" font-size="15" font-weight="800" fill="#0f172a">⚡ Raspberry Pi AI HAT+ (26 TOPS NPU)</text>
+      <text x="20" y="52" font-size="13" fill="#475569">Dedicated hardware acceleration for on-device deep learning.</text>
+      <text x="20" y="74" font-size="12" font-weight="600" fill="#7c3aed">• Real-time YOLOv8 person detection &amp; posture assessment.</text>
+      <text x="20" y="94" font-size="12" fill="#64748b">• Zero-latency thermal + visual human detection at the edge.</text>
+    </g>
+
+    <!-- Point 3 -->
+    <g transform="translate(32, 365)">
+      <rect x="0" y="0" width="486" height="110" rx="10" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.5"/>
+      <text x="20" y="28" font-size="15" font-weight="800" fill="#0f172a">⚙️ Arduino Mega 2560</text>
+      <text x="20" y="52" font-size="13" fill="#475569">Deterministic, low-latency microcontroller.</text>
+      <text x="20" y="74" font-size="12" font-weight="600" fill="#7c3aed">• Hard real-time PWM control for 4WD BTS7960 motor drivers.</text>
+      <text x="20" y="94" font-size="12" fill="#64748b">• Dedicated analog ADC sensor polling &amp; hardware kill-switch.</text>
+    </g>
+
+    <!-- Point 4 -->
+    <g transform="translate(32, 490)">
+      <rect x="0" y="0" width="486" height="120" rx="10" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.5"/>
+      <text x="20" y="28" font-size="15" font-weight="800" fill="#0f172a">🔋 Power &amp; Articulation Hardware</text>
+      <text x="20" y="52" font-size="13" fill="#475569">Isolated dual-rail power management unit &amp; camera gimbal.</text>
+      <text x="20" y="74" font-size="12" font-weight="600" fill="#7c3aed">• Regulated 12V high-current motor bus + clean 5V logic bus.</text>
+      <text x="20" y="94" font-size="12" fill="#64748b">• 2-Axis pan-tilt gimbal surveys ceiling fissures &amp; deep cavities.</text>
+      <text x="20" y="110" font-size="11" font-weight="600" fill="#a855f7">• High-candela strobe &amp; 95dB acoustic beacon for survivors.</text>
+    </g>
+  </g>
+
+  <!-- Pillar 3: Amber Container -->
+  <g transform="translate(1270, 160)">
+    <rect x="0" y="0" width="550" height="640" rx="16" fill="#fef08a" stroke="#facc15" stroke-width="2.5" filter="url(#shadow)"/>
+    <text x="32" y="52" font-size="22" font-weight="800" fill="#a16207">03. BOUNDED AUTONOMY &amp; SAFETY</text>
+    <text x="32" y="80" font-size="14" font-weight="600" fill="#ca8a04">Resilient Mission Protocol &amp; Fail-Safe Control</text>
+
+    <!-- Point 1 -->
+    <g transform="translate(32, 115)">
+      <rect x="0" y="0" width="486" height="95" rx="10" fill="#ffffff" stroke="#fde047" stroke-width="1.5"/>
+      <text x="20" y="28" font-size="15" font-weight="800" fill="#b45309">🛡️ SAFETY GOVERNOR (Hard Constraints)</text>
+      <text x="20" y="52" font-size="13" fill="#475569">Hardcoded deterministic safety rules strictly override AI outputs.</text>
+      <text x="20" y="72" font-size="12" font-weight="700" fill="#b45309">• Enforces hard stop &amp; obstacle avoidance regardless of AI planner.</text>
+      <text x="20" y="88" font-size="11" fill="#78350f">• Eliminates hallucinations or rogue behaviors underground.</text>
+    </g>
+
+    <!-- Point 2 -->
+    <g transform="translate(32, 225)">
+      <rect x="0" y="0" width="486" height="95" rx="10" fill="#ffffff" stroke="#fde047" stroke-width="1.5"/>
+      <text x="20" y="28" font-size="15" font-weight="800" fill="#0f172a">⏱️ Bounded Autonomy Protocol</text>
+      <text x="20" y="52" font-size="13" fill="#475569">Continues mission during communication blackout within strict fences.</text>
+      <text x="20" y="72" font-size="12" font-weight="600" fill="#ca8a04">• Bounded distance &amp; watchdog timer (never unlimited autonomy).</text>
+      <text x="20" y="88" font-size="11" fill="#64748b">• Auto-returns to last known radio link once timer expires.</text>
+    </g>
+
+    <!-- Point 3 -->
+    <g transform="translate(32, 335)">
+      <rect x="0" y="0" width="486" height="90" rx="10" fill="#ffffff" stroke="#fde047" stroke-width="1.5"/>
+      <text x="20" y="28" font-size="15" font-weight="800" fill="#0f172a">↩️ Safe Auto-Rollback</text>
+      <text x="20" y="52" font-size="13" fill="#475569">Autonomous reverse navigation along known safe waypoint trail.</text>
+      <text x="20" y="72" font-size="12" font-weight="600" fill="#ca8a04">• Triggered instantly on toxic gas surge or tunnel collapse hazard.</text>
+    </g>
+
+    <!-- Point 4 -->
+    <g transform="translate(32, 440)">
+      <rect x="0" y="0" width="486" height="90" rx="10" fill="#ffffff" stroke="#fde047" stroke-width="1.5"/>
+      <text x="20" y="28" font-size="15" font-weight="800" fill="#0f172a">📡 Breadcrumb Wireless Relay Dropper</text>
+      <text x="20" y="52" font-size="13" fill="#475569">Physical servo drops wireless repeater nodes at tunnel bends.</text>
+      <text x="20" y="72" font-size="12" font-weight="600" fill="#ca8a04">• Extends RF mesh communication link deep into non-line-of-sight mine.</text>
+    </g>
+
+    <!-- Point 5 -->
+    <g transform="translate(32, 545)">
+      <rect x="0" y="0" width="486" height="85" rx="10" fill="#ffffff" stroke="#fde047" stroke-width="1.5"/>
+      <text x="20" y="28" font-size="15" font-weight="800" fill="#0f172a">💾 Store-and-Forward Blackbox SD</text>
+      <text x="20" y="52" font-size="13" fill="#475569">High-frequency flight recorder caches maps, telemetry &amp; survivor logs.</text>
+      <text x="20" y="70" font-size="12" font-weight="600" fill="#ca8a04">• Automatically syncs and flushes all data when radio link reconnects.</text>
+    </g>
+  </g>
+
+  <!-- Bottom Wide Banner: Surface Rescue Command Station (Dark Navy) -->
+  <g transform="translate(100, 830)">
+    <rect x="0" y="0" width="1720" height="190" rx="16" fill="#0f172a" stroke="#ea580c" stroke-width="2.5" filter="url(#shadow)"/>
+    
+    <rect x="30" y="20" width="560" height="36" rx="8" fill="#ea580c"/>
+    <text x="44" y="44" font-size="15" font-weight="800" fill="#ffffff" letter-spacing="0.5">SURFACE RESCUE COMMAND STATION  (Base Station Laptop/Tablet UI)</text>
+    <text x="610" y="44" font-size="15" font-weight="700" fill="#fed7aa">Guiding Rule: “AI Assists Detection — Rescue Team Makes the Final Decision”</text>
+
+    <!-- 4 Dashboard Feature Cards -->
+    <g transform="translate(30, 72)">
+      <rect x="0" y="0" width="395" height="96" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+      <text x="18" y="30" font-size="14" font-weight="800" fill="#38bdf8">🗺️ Live 2D Map &amp; Gas Heatmap</text>
+      <text x="18" y="54" font-size="12" fill="#94a3b8">Real-time tunnel grid map with colorized gas levels.</text>
+      <text x="18" y="76" font-size="11.5" font-weight="600" fill="#cbd5e1">• Clear red/orange/green safety corridor boundaries.</text>
+    </g>
+
+    <g transform="translate(450, 72)">
+      <rect x="0" y="0" width="395" height="96" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+      <text x="18" y="30" font-size="14" font-weight="800" fill="#f43f5e">📹 Low-Latency Video + Thermal</text>
+      <text x="18" y="54" font-size="12" fill="#94a3b8">Live RGB video stream with thermal IR overlay.</text>
+      <text x="18" y="76" font-size="11.5" font-weight="600" fill="#cbd5e1">• Remote pan-tilt camera head articulation controls.</text>
+    </g>
+
+    <g transform="translate(870, 72)">
+      <rect x="0" y="0" width="395" height="96" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+      <text x="18" y="30" font-size="14" font-weight="800" fill="#4ade80">📡 Mesh Relay Health &amp; Telemetry</text>
+      <text x="18" y="54" font-size="12" fill="#94a3b8">Active breadcrumb node signal link status &amp; battery.</text>
+      <text x="18" y="76" font-size="11.5" font-weight="600" fill="#cbd5e1">• Auto sync status for store-and-forward mission logs.</text>
+    </g>
+
+    <g transform="translate(1290, 72)">
+      <rect x="0" y="0" width="400" height="96" rx="10" fill="#1e293b" stroke="#ea580c" stroke-width="1.5"/>
+      <text x="18" y="30" font-size="14" font-weight="800" fill="#f97316">🕹️ Manual Override &amp; E-STOP</text>
+      <text x="18" y="54" font-size="12" fill="#94a3b8">Immediate hardwired teleoperation override.</text>
+      <text x="18" y="76" font-size="11.5" font-weight="600" fill="#fca5a5">• Emergency motor cutoff &amp; rescue team manual steering.</text>
+    </g>
+  </g>
+</svg>

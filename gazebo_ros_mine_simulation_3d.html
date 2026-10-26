@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.I.N.E.R.S. Rover - 3D Gazebo Sim & ROS 2 SLAM Interactive Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0b0e14; color: #e1e6ed; overflow: hidden; height: 100vh; display: flex; flex-direction: column; }
+        header { background: #121824; border-bottom: 2px solid #1f293d; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; }
+        h1 { font-size: 18px; color: #00e5ff; letter-spacing: 1px; display: flex; align-items: center; gap: 10px; }
+        .badge { background: #00e5ff22; color: #00e5ff; border: 1px solid #00e5ff66; padding: 2px 8px; border-radius: 4px; font-size: 11px; }
+        .main-container { display: flex; flex: 1; position: relative; }
+        #gazebo-canvas { flex: 1; background: #05070a; cursor: grab; }
+        .sidebar { width: 420px; background: #0f141f; border-left: 2px solid #1f293d; display: flex; flex-direction: column; padding: 16px; gap: 16px; overflow-y: auto; }
+        .panel { background: #161c2b; border: 1px solid #232d42; border-radius: 8px; padding: 14px; }
+        .panel-title { font-size: 13px; color: #00ffaa; font-weight: 600; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 0.5px; border-bottom: 1px solid #232d42; padding-bottom: 6px; }
+        .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 12px; }
+        .stat-item { background: #0f141f; padding: 8px; border-radius: 4px; }
+        .stat-label { color: #8a99ad; font-size: 10px; text-transform: uppercase; }
+        .stat-value { color: #ffffff; font-weight: 600; margin-top: 2px; }
+        .bar-container { background: #0b0e14; height: 10px; border-radius: 5px; overflow: hidden; margin-top: 4px; }
+        .bar-fill { height: 100%; width: 0%; transition: width 0.2s ease; }
+        .ch4-fill { background: linear-gradient(90deg, #ffd700, #ffaa00); }
+        .co-fill { background: linear-gradient(90deg, #ff9900, #ff3300); }
+        #slam-map-canvas { background: #07090e; border: 1px solid #232d42; border-radius: 6px; width: 100%; height: 200px; }
+        .btn-group { display: flex; gap: 8px; margin-top: 10px; }
+        button { flex: 1; padding: 10px; background: #00e5ff22; color: #00e5ff; border: 1px solid #00e5ff66; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+        button:hover { background: #00e5ff; color: #000000; }
+        button.active { background: #00ffaa; color: #000; border-color: #00ffaa; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+    <header>
+        <h1><span>M.I.N.E.R.S. ROVER</span> <span class="badge">GAZEBO SIM 3D & ROS 2 HUD</span></h1>
+        <div style="font-size: 12px; color: #8a99ad;">
+            AutoCAD World: <strong style="color:#00ffaa">sample_mine_drift_blueprint.dxf</strong> | ROS 2 Topic: <strong style="color:#00e5ff">/cmd_vel</strong>
+        </div>
+    </header>
+    <div class="main-container">
+        <div id="gazebo-canvas"></div>
+        <div class="sidebar">
+            <div class="panel">
+                <div class="panel-title">ROS 2 Navigation & Controls</div>
+                <div class="btn-group">
+                    <button id="btn-autonav" class="active" onclick="toggleAutoNav()">AUTONAV ON</button>
+                    <button onclick="toggleHeadlights()">LED LIGHTS</button>
+                    <button onclick="resetSimulation()">RESET SIM</button>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-title">ROS 2 RViz Live SLAM Map</div>
+                <canvas id="slam-map-canvas" width="380" height="200"></canvas>
+            </div>
+
+            <div class="panel">
+                <div class="panel-title">Multi-Height Gas Stratification</div>
+                <div style="margin-bottom: 8px;">
+                    <div style="display:flex; justify-content:space-between; font-size:12px;">
+                        <span>Methane (CH4 @ Roof 1.5m)</span>
+                        <span id="ch4-val" style="color:#ffd700; font-weight:bold;">120 PPM</span>
+                    </div>
+                    <div class="bar-container"><div id="ch4-bar" class="bar-fill ch4-fill" style="width: 15%;"></div></div>
+                </div>
+                <div>
+                    <div style="display:flex; justify-content:space-between; font-size:12px;">
+                        <span>Carbon Monoxide (CO @ Breathing 0.8m)</span>
+                        <span id="co-val" style="color:#ff5500; font-weight:bold;">25 PPM</span>
+                    </div>
+                    <div class="bar-container"><div id="co-bar" class="bar-fill co-fill" style="width: 12%;"></div></div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-title">Rover Telemetry (/odom & /sonar)</div>
+                <div class="stat-grid">
+                    <div class="stat-item"><div class="stat-label">Position X, Y</div><div id="stat-pos" class="stat-value">2.00, 2.00 m</div></div>
+                    <div class="stat-item"><div class="stat-label">Yaw Heading</div><div id="stat-yaw" class="stat-value">0.0°</div></div>
+                    <div class="stat-item"><div class="stat-label">Linear Vel (v_x)</div><div id="stat-vx" class="stat-value">0.35 m/s</div></div>
+                    <div class="stat-item"><div class="stat-label">Front Sonar</div><div id="stat-sonar" class="stat-value" style="color:#00ffaa">3.80 m</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Three.js 3D Gazebo Simulation Setup
+        let scene, camera, renderer, controls;
+        let rover, headlights = [];
+        let autoNavEnabled = true;
+        let roverX = 2.0, roverY = 2.0, roverYaw = 0.0;
+        let simTime = 0;
+
+        function init3D() {
+            const container = document.getElementById('gazebo-canvas');
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0x06080d);
+            scene.fog = new THREE.FogExp2(0x06080d, 0.035);
+
+            camera = new THREE.PerspectiveCamera(60, container.clientWidth / container.clientHeight, 0.1, 100);
+            camera.position.set(-3, 3, 5);
+
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            renderer.shadowMap.enabled = true;
+            container.appendChild(renderer.domElement);
+
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+
+            // Ambient Light & Mine Shaft Spotlight
+            const ambient = new THREE.AmbientLight(0x222a38, 0.6);
+            scene.add(ambient);
+
+            // Ground Floor (Mine Grid)
+            const grid = new THREE.GridHelper(50, 50, 0x00e5ff, 0x1a2638);
+            grid.position.set(12.5, 7.5, 0);
+            grid.rotation.x = Math.PI / 2;
+            scene.add(grid);
+
+            // Create Mine Rock Walls (Extruded AutoCAD DXF geometry)
+            createMineWalls();
+
+            // Create 3D M.I.N.E.R.S. Rover Model
+            createRoverModel();
+
+            // Create Gas Plumes (Stratified Clouds)
+            createGasPlumes();
+
+            window.addEventListener('resize', onWindowResize);
+            animate();
+        }
+
+        function createMineWalls() {
+            const wallMat = new THREE.MeshStandardMaterial({ color: 0x2a3242, roughness: 0.8 });
+            const walls = [
+                { x: 12.5, y: 0, w: 25, h: 2.8, d: 0.3 },
+                { x: 12.5, y: 4, w: 25, h: 2.8, d: 0.3 },
+                { x: 25, y: 7.5, w: 0.3, h: 2.8, d: 15 },
+                { x: 21, y: 7.5, w: 0.3, h: 2.8, d: 11 }
+            ];
+            walls.forEach(w => {
+                const geo = new THREE.BoxGeometry(w.w, w.d, w.h);
+                const mesh = new THREE.Mesh(geo, wallMat);
+                mesh.position.set(w.x, w.y, w.h / 2);
+                scene.add(mesh);
+            });
+
+            // Collapsed Rockfall Obstacle
+            const rockMat = new THREE.MeshStandardMaterial({ color: 0x5a4838, roughness: 0.9 });
+            const rock = new THREE.Mesh(new THREE.DodecahedronGeometry(0.7), rockMat);
+            rock.position.set(14.5, 2.0, 0.4);
+            scene.add(rock);
+        }
+
+        function createRoverModel() {
+            rover = new THREE.Group();
+
+            // Chassis Stealth Octagon (Yellow/Gold plate)
+            const bodyMat = new THREE.MeshStandardMaterial({ color: 0xf5b800, metalness: 0.6, roughness: 0.3 });
+            const body = new THREE.Mesh(new THREE.BoxGeometry(0.45, 0.42, 0.18), bodyMat);
+            body.position.z = 0.15;
+            rover.add(body);
+
+            // 4 Offroad Wheels
+            const wheelMat = new THREE.MeshStandardMaterial({ color: 0x111111, roughness: 0.9 });
+            const wheelOffsets = [
+                [0.18, 0.24], [0.18, -0.24], [-0.18, 0.24], [-0.18, -0.24]
+            ];
+            wheelOffsets.forEach(pos => {
+                const wheel = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.08, 0.06, 16), wheelMat);
+                wheel.rotation.x = Math.PI / 2;
+                wheel.position.set(pos[0], pos[1], 0.08);
+                rover.add(wheel);
+            });
+
+            // LED Headlights (Spotlights)
+            const hl1 = new THREE.SpotLight(0xffffff, 2.0, 8, Math.PI / 6, 0.5);
+            hl1.position.set(0.22, 0.12, 0.2);
+            hl1.target.position.set(2.0, 0.12, 0.1);
+            rover.add(hl1);
+            rover.add(hl1.target);
+            headlights.push(hl1);
+
+            scene.add(rover);
+        }
+
+        function createGasPlumes() {
+            // Methane Cyan Cloud
+            const ch4Mat = new THREE.MeshBasicMaterial({ color: 0x00e5ff, transparent: true, opacity: 0.25 });
+            const ch4Mesh = new THREE.Mesh(new THREE.SphereGeometry(1.2, 16, 16), ch4Mat);
+            ch4Mesh.position.set(10.0, 2.0, 2.2);
+            scene.add(ch4Mesh);
+
+            // Carbon Monoxide Orange Cloud
+            const coMat = new THREE.MeshBasicMaterial({ color: 0xff6600, transparent: true, opacity: 0.30 });
+            const coMesh = new THREE.Mesh(new THREE.SphereGeometry(1.0, 16, 16), coMat);
+            coMesh.position.set(10.0, 2.0, 1.0);
+            scene.add(coMesh);
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            simTime += 0.02;
+
+            if (autoNavEnabled) {
+                roverX += 0.015;
+                if (roverX > 22.0) roverX = 2.0;
+                rover.position.set(roverX, roverY, 0);
+            }
+
+            controls.update();
+            renderer.render(scene, camera);
+
+            // Update UI Telemetry
+            document.getElementById('stat-pos').innerText = `${roverX.toFixed(2)}, ${roverY.toFixed(2)} m`;
+            document.getElementById('stat-sonar').innerText = `${Math.max(0.4, 14.5 - roverX - 0.7).toFixed(2)} m`;
+            
+            drawSlamMap();
+        }
+
+        function drawSlamMap() {
+            const canvas = document.getElementById('slam-map-canvas');
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#07090e';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Draw grid & walls
+            ctx.strokeStyle = '#1f293d';
+            ctx.strokeRect(20, 20, 340, 160);
+
+            // Draw Rover in SLAM Canvas
+            const rx = 20 + (roverX / 25.0) * 340;
+            const ry = 180 - (roverY / 15.0) * 160;
+            
+            ctx.fillStyle = '#00ffaa';
+            ctx.beginPath();
+            ctx.arc(rx, ry, 5, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        function toggleAutoNav() {
+            autoNavEnabled = !autoNavEnabled;
+            const btn = document.getElementById('btn-autonav');
+            btn.innerText = autoNavEnabled ? 'AUTONAV ON' : 'AUTONAV OFF';
+            btn.classList.toggle('active', autoNavEnabled);
+        }
+
+        function toggleHeadlights() {
+            headlights.forEach(h => h.intensity = h.intensity === 0 ? 2.0 : 0);
+        }
+
+        function resetSimulation() {
+            roverX = 2.0; roverY = 2.0;
+        }
+
+        function onWindowResize() {
+            const container = document.getElementById('gazebo-canvas');
+            camera.aspect = container.clientWidth / container.clientHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(container.clientWidth, container.clientHeight);
+        }
+
+        init3D();
+    </script>
+</body>
+</html>

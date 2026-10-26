@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1780 890" width="1780" height="890" style="background:transparent; font-family:'Segoe UI', -apple-system, Roboto, sans-serif;">
+  <defs>
+    <filter id="card-shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+    <filter id="banner-shadow" x="-2%" y="-4%" width="104%" height="112%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- ==================== PILLAR 1: MULTI-MODAL SENSING ==================== -->
+  <g transform="translate(10, 10)">
+    <rect x="0" y="0" width="560" height="630" rx="16" fill="#ecfeff" stroke="#22d3ee" stroke-width="2.5" filter="url(#card-shadow)"/>
+    
+    <!-- Pillar 1 Header -->
+    <rect x="20" y="16" width="520" height="58" rx="10" fill="#06b6d4"/>
+    <text x="280" y="42" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">01. MULTI-MODAL SENSING</text>
+    <text x="280" y="62" font-size="12" font-weight="600" fill="#cffafe" text-anchor="middle">Environmental &amp; Spatial Perception Suite</text>
+
+    <!-- P1 Card 1: 360 LiDAR -->
+    <g transform="translate(20, 88)">
+      <rect x="0" y="0" width="520" height="96" rx="10" fill="#ffffff" stroke="#a5f3fc" stroke-width="1.5"/>
+      <text x="18" y="28" font-size="15" font-weight="800" fill="#0891b2">📡 360° 2D LiDAR</text>
+      <text x="18" y="50" font-size="13" fill="#334155">Continuous 2D tunnel mapping &amp; boundary obstacle detection.</text>
+      <text x="18" y="72" font-size="12" font-weight="700" fill="#0284c7">• Strict Constraint: No expensive/fragile 3D LiDAR used.</text>
+      <text x="18" y="88" font-size="11" fill="#64748b">• Fast 10Hz scan rate optimized for low-profile rover clearance.</text>
+    </g>
+
+    <!-- P1 Card 2: Stereo RGB-D -->
+    <g transform="translate(20, 194)">
+      <rect x="0" y="0" width="520" height="96" rx="10" fill="#ffffff" stroke="#a5f3fc" stroke-width="1.5"/>
+      <text x="18" y="28" font-size="15" font-weight="800" fill="#0891b2">📷 Stereo RGB-D Camera</text>
+      <text x="18" y="50" font-size="13" fill="#334155">Unified camera: real-time video stream + stereo depth estimation.</text>
+      <text x="18" y="72" font-size="12" font-weight="700" fill="#0284c7">• Resolves traversability, ceiling rock falls &amp; terrain drop-offs.</text>
+      <text x="18" y="88" font-size="11" fill="#64748b">• Hardware-synchronized dual lenses eliminate frame disparity lag.</text>
+    </g>
+
+    <!-- P1 Card 3: Thermal Camera -->
+    <g transform="translate(20, 300)">
+      <rect x="0" y="0" width="520" height="96" rx="10" fill="#ffffff" stroke="#a5f3fc" stroke-width="1.5"/>
+      <text x="18" y="28" font-size="15" font-weight="800" fill="#0891b2">🔥 Thermal Infrared Camera</text>
+      <text x="18" y="50" font-size="13" fill="#334155">Detects survivor body heat signatures through zero visibility.</text>
+      <text x="18" y="72" font-size="12" font-weight="700" fill="#0284c7">• Unaffected by coal dust, toxic haze, or complete darkness.</text>
+      <text x="18" y="88" font-size="11" fill="#64748b">• Heat anomaly localization highlights concealed human presence.</text>
+    </g>
+
+    <!-- P1 Card 4: Multi-Gas Array -->
+    <g transform="translate(20, 406)">
+      <rect x="0" y="0" width="520" height="96" rx="10" fill="#ffffff" stroke="#a5f3fc" stroke-width="1.5"/>
+      <text x="18" y="28" font-size="15" font-weight="800" fill="#0891b2">🧪 Multi-Gas Sensor Array</text>
+      <text x="18" y="50" font-size="13" fill="#334155">Real-time concentration tracking: CH4, CO, CO2, O2, &amp; Smoke.</text>
+      <text x="18" y="72" font-size="12" font-weight="700" fill="#0284c7">• Immediate threshold alarms before entering explosive pockets.</text>
+      <text x="18" y="88" font-size="11" fill="#64748b">• Continuously maps atmospheric risk zones along the rover path.</text>
+    </g>
+
+    <!-- P1 Card 5: IMU & Odometry -->
+    <g transform="translate(20, 512)">
+      <rect x="0" y="0" width="520" height="104" rx="10" fill="#ffffff" stroke="#a5f3fc" stroke-width="1.5"/>
+      <text x="18" y="28" font-size="15" font-weight="800" fill="#0891b2">🧭 Slip-Aware IMU &amp; Odometry</text>
+      <text x="18" y="50" font-size="13" fill="#334155">6-DOF pitch/roll tracking &amp; dual optical/magnetic wheel encoders.</text>
+      <text x="18" y="72" font-size="12" font-weight="700" fill="#0284c7">• Detects wheel slip on wet mine slurry &amp; halts rollover risk.</text>
+      <text x="18" y="90" font-size="11" fill="#64748b">• Backup ultrasonic sonar detects water ponds &amp; muddy sumps.</text>
+    </g>
+  </g>
+
+  <!-- ==================== PILLAR 2: INTELLIGENT EDGE BRAIN ==================== -->
+  <g transform="translate(610, 10)">
+    <rect x="0" y="0" width="560" height="630" rx="16" fill="#faf5ff" stroke="#c084fc" stroke-width="2.5" filter="url(#card-shadow)"/>
+    
+    <!-- Pillar 2 Header -->
+    <rect x="20" y="16" width="520" height="58" rx="10" fill="#7c3aed"/>
+    <text x="280" y="42" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">02. INTELLIGENT EDGE BRAIN</text>
+    <text x="280" y="62" font-size="12" font-weight="600" fill="#f3e8ff" text-anchor="middle">Onboard AI &amp; Real-Time Compute Core</text>
+
+    <!-- P2 Card 1: Raspberry Pi 5 -->
+    <g transform="translate(20, 88)">
+      <rect x="0" y="0" width="520" height="120" rx="10" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.5"/>
+      <text x="18" y="28" font-size="15" font-weight="800" fill="#6b21a8">🧠 Raspberry Pi 5 (8GB RAM)</text>
+      <text x="18" y="50" font-size="13" fill="#334155">Master high-level computing node running ROS 2 on Ubuntu Linux.</text>
+      <text x="18" y="74" font-size="12" font-weight="700" fill="#7c3aed">• Real-time LiDAR SLAM mapping &amp; dynamic 2D costmaps.</text>
+      <text x="18" y="94" font-size="12" fill="#475569">• Store-and-forward mission database host (SQLite / SQLite3).</text>
+      <text x="18" y="110" font-size="11" fill="#64748b">• Synchronizes multi-sensor timestamps with microsecond precision.</text>
+    </g>
+
+    <!-- P2 Card 2: AI HAT+ -->
+    <g transform="translate(20, 218)">
+      <rect x="0" y="0" width="520" height="120" rx="10" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.5"/>
+      <text x="18" y="28" font-size="15" font-weight="800" fill="#6b21a8">⚡ Raspberry Pi AI HAT+ (26 TOPS NPU)</text>
+      <text x="18" y="50" font-size="13" fill="#334155">Dedicated hardware acceleration for on-device deep learning.</text>
+      <text x="18" y="74" font-size="12" font-weight="700" fill="#7c3aed">• Real-time YOLOv8 person detection &amp; posture assessment.</text>
+      <text x="18" y="94" font-size="12" fill="#475569">• Zero cloud dependency — all inference runs 100% locally offline.</text>
+      <text x="18" y="110" font-size="11" fill="#64748b">• Fuses thermal IR blobs with RGB contours for verified survivor confidence.</text>
+    </g>
+
+    <!-- P2 Card 3: Arduino Mega 2560 -->
+    <g transform="translate(20, 348)">
+      <rect x="0" y="0" width="520" height="120" rx="10" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.5"/>
+      <text x="18" y="28" font-size="15" font-weight="800" fill="#6b21a8">⚙️ Arduino Mega 2560 Microcontroller</text>
+      <text x="18" y="50" font-size="13" fill="#334155">Deterministic, hard real-time motor &amp; low-level hardware manager.</text>
+      <text x="18" y="74" font-size="12" font-weight="700" fill="#7c3aed">• Precise PWM control for 4WD high-torque BTS7960 drivers.</text>
+      <text x="18" y="94" font-size="12" fill="#475569">• Dedicated analog ADC sensor polling (gas sensors, battery voltage).</text>
+      <text x="18" y="110" font-size="11" fill="#64748b">• Hardware watchdog timer &amp; physical safety kill-switch circuit.</text>
+    </g>
+
+    <!-- P2 Card 4: Power & Pan-Tilt -->
+    <g transform="translate(20, 478)">
+      <rect x="0" y="0" width="520" height="138" rx="10" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.5"/>
+      <text x="18" y="28" font-size="15" font-weight="800" fill="#6b21a8">🔋 Dual-Rail Power &amp; Articulation Hardware</text>
+      <text x="18" y="50" font-size="13" fill="#334155">Isolated dual-rail power management unit &amp; motorized payload head.</text>
+      <text x="18" y="74" font-size="12" font-weight="700" fill="#7c3aed">• Regulated 12V motor bus + isolated clean 5V logic bus.</text>
+      <text x="18" y="94" font-size="12" fill="#475569">• 2-Axis pan-tilt gimbal surveys ceiling fissures &amp; deep cavities.</text>
+      <text x="18" y="112" font-size="11.5" font-weight="600" fill="#9333ea">• High-candela strobe light &amp; 95dB acoustic beacon for trapped survivors.</text>
+      <text x="18" y="128" font-size="11" fill="#64748b">• Transient voltage suppressor diodes protect against motor back-EMF.</text>
+    </g>
+  </g>
+
+  <!-- ==================== PILLAR 3: BOUNDED AUTONOMY & SAFETY ==================== -->
+  <g transform="translate(1210, 10)">
+    <rect x="0" y="0" width="560" height="630" rx="16" fill="#fefce8" stroke="#facc15" stroke-width="2.5" filter="url(#card-shadow)"/>
+    
+    <!-- Pillar 3 Header -->
+    <rect x="20" y="16" width="520" height="58" rx="10" fill="#ca8a04"/>
+    <text x="280" y="42" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">03. BOUNDED AUTONOMY &amp; SAFETY</text>
+    <text x="280" y="62" font-size="12" font-weight="600" fill="#fef08a" text-anchor="middle">Resilient Mission Protocol &amp; Fail-Safe Control</text>
+
+    <!-- P3 Card 1: Safety Governor -->
+    <g transform="translate(20, 88)">
+      <rect x="0" y="0" width="520" height="96" rx="10" fill="#ffffff" stroke="#fde047" stroke-width="1.5"/>
+      <text x="18" y="28" font-size="15" font-weight="800" fill="#b45309">🛡️ SAFETY GOVERNOR (Hard Constraints)</text>
+      <text x="18" y="50" font-size="13" fill="#334155">Deterministic hardcoded safety rules strictly override AI outputs.</text>
+      <text x="18" y="72" font-size="12" font-weight="800" fill="#b45309">• Absolute veto over AI path planner on obstacle or cliff hazard.</text>
+      <text x="18" y="88" font-size="11" fill="#78350f">• Prevents AI hallucinations from commanding unsafe motor trajectories.</text>
+    </g>
+
+    <!-- P3 Card 2: Bounded Autonomy -->
+    <g transform="translate(20, 194)">
+      <rect x="0" y="0" width="520" height="96" rx="10" fill="#ffffff" stroke="#fde047" stroke-width="1.5"/>
+      <text x="18" y="28" font-size="15" font-weight="800" fill="#a16207">⏱️ Bounded Autonomy Protocol</text>
+      <text x="18" y="50" font-size="13" fill="#334155">Continues mission during communication blackout within strict limits.</text>
+      <text x="18" y="72" font-size="12" font-weight="700" fill="#ca8a04">• Bounded distance &amp; watchdog countdown (never runaway autonomy).</text>
+      <text x="18" y="88" font-size="11" fill="#64748b">• Auto-returns to last known radio coverage zone upon timer expiry.</text>
+    </g>
+
+    <!-- P3 Card 3: Safe Auto-Rollback -->
+    <g transform="translate(20, 300)">
+      <rect x="0" y="0" width="520" height="96" rx="10" fill="#ffffff" stroke="#fde047" stroke-width="1.5"/>
+      <text x="18" y="28" font-size="15" font-weight="800" fill="#a16207">↩️ Safe Auto-Rollback</text>
+      <text x="18" y="50" font-size="13" fill="#334155">Autonomous reverse navigation along known safe breadcrumb trail.</text>
+      <text x="18" y="72" font-size="12" font-weight="700" fill="#ca8a04">• Instantly triggered by explosive gas surge or cave-in detection.</text>
+      <text x="18" y="88" font-size="11" fill="#64748b">• Backtracks exclusively along verified obstacle-free coordinates.</text>
+    </g>
+
+    <!-- P3 Card 4: Relay Dropper -->
+    <g transform="translate(20, 406)">
+      <rect x="0" y="0" width="520" height="96" rx="10" fill="#ffffff" stroke="#fde047" stroke-width="1.5"/>
+      <text x="18" y="28" font-size="15" font-weight="800" fill="#a16207">📡 Breadcrumb Relay Dropper</text>
+      <text x="18" y="50" font-size="13" fill="#334155">Mechanical servo dispenses RF mesh repeater nodes at tunnel bends.</text>
+      <text x="18" y="72" font-size="12" font-weight="700" fill="#ca8a04">• Extends wireless mesh link deep into non-line-of-sight mine shafts.</text>
+      <text x="18" y="88" font-size="11" fill="#64748b">• Enables multi-hop signal propagation through solid rock turns.</text>
+    </g>
+
+    <!-- P3 Card 5: Store-and-Forward Blackbox -->
+    <g transform="translate(20, 512)">
+      <rect x="0" y="0" width="520" height="104" rx="10" fill="#ffffff" stroke="#fde047" stroke-width="1.5"/>
+      <text x="18" y="28" font-size="15" font-weight="800" fill="#a16207">💾 Store-and-Forward Blackbox SD</text>
+      <text x="18" y="50" font-size="13" fill="#334155">High-frequency onboard flight recorder stores telemetry &amp; survivor logs.</text>
+      <text x="18" y="72" font-size="12" font-weight="700" fill="#ca8a04">• Automatically syncs &amp; flushes cached data when RF link reconnects.</text>
+      <text x="18" y="90" font-size="11" fill="#64748b">• Zero data loss during comms blackout: maps and gas logs fully intact.</text>
+    </g>
+  </g>
+
+  <!-- ==================== BOTTOM WIDE BANNER: SURFACE RESCUE COMMAND STATION ==================== -->
+  <g transform="translate(10, 655)">
+    <rect x="0" y="0" width="1760" height="225" rx="16" fill="#0f172a" stroke="#ea580c" stroke-width="2.5" filter="url(#banner-shadow)"/>
+    
+    <!-- Banner Header Bar -->
+    <rect x="24" y="16" width="540" height="36" rx="8" fill="#ea580c"/>
+    <text x="38" y="41" font-size="14.5" font-weight="800" fill="#ffffff" letter-spacing="0.5">SURFACE RESCUE COMMAND STATION (Base Station Dashboard)</text>
+    <text x="585" y="41" font-size="14.5" font-weight="700" fill="#fed7aa">Guiding Rule: “AI Assists Detection — Rescue Team Makes the Final Decision”</text>
+
+    <!-- Feature Card 1: Live Map & Gas Heatmap -->
+    <g transform="translate(24, 66)">
+      <rect x="0" y="0" width="410" height="138" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+      <text x="18" y="30" font-size="15" font-weight="800" fill="#38bdf8">🗺️ Live 2D Map &amp; Gas Heatmap</text>
+      <text x="18" y="56" font-size="12.5" fill="#94a3b8">Real-time tunnel grid map with colorized multi-gas overlay.</text>
+      <text x="18" y="80" font-size="12" font-weight="600" fill="#cbd5e1">• Clear Green / Yellow / Red safety corridors.</text>
+      <text x="18" y="102" font-size="11.5" fill="#94a3b8">• Live rover position &amp; planned return path tracking.</text>
+      <text x="18" y="122" font-size="11" fill="#64748b">• Exportable 2D CAD/DXF drift maps for rescue teams.</text>
+    </g>
+
+    <!-- Feature Card 2: Low-Latency Video + Thermal -->
+    <g transform="translate(454, 66)">
+      <rect x="0" y="0" width="410" height="138" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+      <text x="18" y="30" font-size="15" font-weight="800" fill="#f43f5e">📹 Low-Latency Video + Thermal</text>
+      <text x="18" y="56" font-size="12.5" fill="#94a3b8">Live synchronized RGB video feed with thermal IR overlay.</text>
+      <text x="18" y="80" font-size="12" font-weight="600" fill="#cbd5e1">• Real-time survivor bounding boxes &amp; posture tags.</text>
+      <text x="18" y="102" font-size="11.5" fill="#94a3b8">• Remote pan-tilt camera head articulation controls.</text>
+      <text x="18" y="122" font-size="11" fill="#64748b">• One-click snapshot capture for incident briefing logs.</text>
+    </g>
+
+    <!-- Feature Card 3: Mesh Relay Health & Telemetry -->
+    <g transform="translate(884, 66)">
+      <rect x="0" y="0" width="410" height="138" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+      <text x="18" y="30" font-size="15" font-weight="800" fill="#4ade80">📡 Mesh Relay Health &amp; Telemetry</text>
+      <text x="18" y="56" font-size="12.5" fill="#94a3b8">Breadcrumb repeater link quality &amp; battery monitor.</text>
+      <text x="18" y="80" font-size="12" font-weight="600" fill="#cbd5e1">• Multi-hop signal latency &amp; packet loss diagnostics.</text>
+      <text x="18" y="102" font-size="11.5" fill="#94a3b8">• Automated sync status for store-and-forward logs.</text>
+      <text x="18" y="122" font-size="11" fill="#64748b">• Audible alerts when RF link margins drop below safety floor.</text>
+    </g>
+
+    <!-- Feature Card 4: Manual Override & E-STOP -->
+    <g transform="translate(1314, 66)">
+      <rect x="0" y="0" width="420" height="138" rx="10" fill="#1e293b" stroke="#ea580c" stroke-width="1.5"/>
+      <text x="18" y="30" font-size="15" font-weight="800" fill="#f97316">🕹️ Manual Override &amp; Hard E-STOP</text>
+      <text x="18" y="56" font-size="12.5" fill="#94a3b8">Instant operator control takeover with zero software delay.</text>
+      <text x="18" y="80" font-size="12" font-weight="700" fill="#fca5a5">• Emergency motor cutoff &amp; fail-safe brake locking.</text>
+      <text x="18" y="102" font-size="11.5" fill="#fca5a5">• Rescue team manual steering overrides autonomous planner.</text>
+      <text x="18" y="122" font-size="11" fill="#94a3b8">• Direct servo trigger to drop extra breadcrumb relays.</text>
+    </g>
+  </g>
+</svg>

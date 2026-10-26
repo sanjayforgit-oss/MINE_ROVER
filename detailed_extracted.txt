@@ -1,0 +1,122 @@
+
+1. Title of the project / product
+
+M.I.N.E.R.S. – Mobile Intelligent Navigation and Emergency Rescue System
+
+
+2. Problem Statement
+
+Underground mine rescue teams face unknown hazards, poor visibility, difficult terrain, survivor-location uncertainty and unreliable communication, making initial human inspection dangerous and slow.
+
+
+3. Solution proposed
+
+M.I.N.E.R.S. is a low-cost AI-integrated rescue rover that:
+
+• Monitors CH₄, CO, O₂ and environmental hazards.
+• Uses 360° 2D LiDAR for mapping, navigation and obstacle detection.
+• Uses one stereo camera for both RGB vision and depth estimation.
+• Uses thermal + RGB + depth + posture/motion analysis for survivor detection.
+• Builds a dynamic rescue map showing tunnels, hazards, survivors and communication status.
+• Uses risk-aware navigation considering hazards, communication and battery level.
+• Supports bounded autonomous operation during temporary communication loss.
+• Stores mission data locally and synchronizes it after reconnection.
+• Provides a live rescue dashboard with video, thermal data, hazards, survivor alerts and rover status.
+• Includes an independent Safety Governor, manual override and emergency stop.
+
+
+4. Implementation Plan
+
+Build and integrate the rover in phases:
+
+Sensors & Drive → ROS 2 → SLAM/Navigation → AI Perception → Risk & Mission Planning → Communication Resilience → Rescue Dashboard → Testing
+
+Target beneficiaries:
+Mine rescue teams, underground workers, mine safety officers and emergency response teams.
+
+Expected outcomes:
+Safer reconnaissance, faster hazard assessment, improved survivor localization and better rescue-team situational awareness.
+
+
+5. Safety and Efficiency Analysis
+
+M.I.N.E.R.S. reduces the need for immediate human entry into potentially hazardous areas by performing initial reconnaissance remotely.
+
+Safety:
+• Multimodal sensing and sensor redundancy
+• Obstacle avoidance and localization monitoring
+• Communication-loss safe behaviour
+• Battery and fault monitoring
+• Independent Safety Governor
+• Manual override and emergency stop
+
+Efficiency:
+• Rapid underground reconnaissance
+• Real-time hazard mapping
+• Faster survivor identification
+• Centralized rescue information through the dashboard
+
+
+6. Scalability and Future Development
+
+The modular architecture allows future upgrades such as:
+
+• Industrial-grade communication and relay networks
+• Improved thermal and gas sensors
+• UWB-assisted localization
+• Advanced edge AI and mine-specific datasets
+• Multi-rover cooperative exploration
+• Improved structural-risk analysis
+• Certified mine-deployable hardware
+• Adaptation for tunnels, disaster zones and confined-space inspection
+
+
+7. Innovation Advantage
+
+M.I.N.E.R.S. does not rely on a single AI model or sensor. Its key innovation is the integration of:
+
+Multimodal Survivor Intelligence
++
+Risk-Aware Navigation
++
+Communication-Resilient Bounded Autonomy
++
+Dynamic Rescue Intelligence Map
++
+Independent Safety Governor
+
+During communication loss, the rover can continue a predefined bounded mission, store information locally and attempt safe recovery/reconnection instead of immediately losing the mission.
+
+This creates a unified rescue-support system rather than a conventional inspection rover with isolated sensing capabilities.
+
+
+8. Visual Impact & User Journey
+
+BEFORE
+
+Mine Emergency
+→ Unknown Tunnel Conditions
+→ Human Entry for Reconnaissance
+→ Hazard Exposure
+→ Uncertain Survivor Location
+→ Limited Situational Information
+
+
+WITH M.I.N.E.R.S.
+
+Mine Emergency
+→ Rover Deployment
+→ Autonomous/Assisted Exploration
+→ Hazard Mapping
+→ Thermal + RGB + Depth Survivor Detection
+→ Risk Assessment
+→ Communication-Resilient Operation
+→ Live Rescue Intelligence Dashboard
+→ Informed Human Rescue Decision
+
+
+DETAILED PROJECT REPORT
+
+Full architecture, components, AI pipeline, communication system, implementation roadmap, testing methodology, research references and future development:
+
+[INSERT GOOGLE DOCS LINK HERE]

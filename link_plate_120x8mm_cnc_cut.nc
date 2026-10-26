@@ -1,0 +1,59 @@
+( ========================================================== )
+( M.I.N.E.R.S. ROVER - CNC LINK PLATE 120x8x2.0mm )
+( INNER HOLE CLEARANCE: 105.0mm | PITCH: 108.0mm )
+( TOOL: 2.0mm Flat Endmill | UNITS: MM )
+( STOCK THICKNESS: 2.0mm | TOTAL CUT DEPTH: -2.2mm )
+( ========================================================== )
+G21          (Units in Millimeters)
+G90          (Absolute Positioning)
+G17          (XY Plane Selection)
+G94          (Feed per minute)
+M03 S12000   (Spindle On 12000 RPM)
+G00 Z5.00    (Safe Clearance Height)
+
+( --- OPERATION 1: BORE 3.0MM HOLES --- )
+( Hole 1 at X=6.000, Y=4.000 )
+G00 X6.000 Y4.000
+G00 Z1.000
+G01 Z-1.100 F150
+G01 X6.500 Y4.000 F600
+G02 X6.500 Y4.000 I-0.500 J0.000
+G01 X6.000 Y4.000
+G01 Z-2.200 F150
+G01 X6.500 Y4.000 F600
+G02 X6.500 Y4.000 I-0.500 J0.000
+G01 X6.000 Y4.000
+G00 Z5.00
+
+( Hole 2 at X=114.000, Y=4.000 )
+G00 X114.000 Y4.000
+G00 Z1.000
+G01 Z-1.100 F150
+G01 X114.500 Y4.000 F600
+G02 X114.500 Y4.000 I-0.500 J0.000
+G01 X114.000 Y4.000
+G01 Z-2.200 F150
+G01 X114.500 Y4.000 F600
+G02 X114.500 Y4.000 I-0.500 J0.000
+G01 X114.000 Y4.000
+G00 Z5.00
+
+( --- OPERATION 2: PROFILE CUT OUTER CONTOUR --- )
+G00 X4.000 Y-1.000
+G00 Z1.000
+( Pass at Z = -1.100 mm )
+G01 Z-1.100 F150
+G01 X116.000 Y-1.000 F600
+G03 X116.000 Y9.000 I0.000 J5.000
+G01 X4.000 Y9.000
+G03 X4.000 Y-1.000 I0.000 J-5.000
+( Pass at Z = -2.200 mm )
+G01 Z-2.200 F150
+G01 X116.000 Y-1.000 F600
+G03 X116.000 Y9.000 I0.000 J5.000
+G01 X4.000 Y9.000
+G03 X4.000 Y-1.000 I0.000 J-5.000
+G00 Z5.00
+M05          (Spindle Stop)
+G00 X0 Y0    (Return to Origin Home)
+M30          (End of Program)

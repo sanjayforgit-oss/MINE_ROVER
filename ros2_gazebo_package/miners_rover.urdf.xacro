@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<robot name="miners_rover" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Robot Core Properties -->
+  <xacro:property name="chassis_width" value="0.42" />
+  <xacro:property name="chassis_length" value="0.45" />
+  <xacro:property name="chassis_height" value="0.22" />
+  <xacro:property name="wheel_radius" value="0.08" />
+  <xacro:property name="wheel_width" value="0.06" />
+
+  <!-- Base Footprint -->
+  <link name="base_footprint"/>
+
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 ${wheel_radius}" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Base Link (Chassis Frame) -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 ${chassis_height/2}" rpy="0 0 0"/>
+      <geometry>
+        <box size="${chassis_length} ${chassis_width} ${chassis_height}"/>
+      </geometry>
+      <material name="yellow_gold">
+        <color rgba="0.95 0.75 0.10 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 ${chassis_height/2}" rpy="0 0 0"/>
+      <geometry>
+        <box size="${chassis_length} ${chassis_width} ${chassis_height}"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="6.5"/>
+      <inertia ixx="0.12" ixy="0.0" ixz="0.0" iyy="0.15" iyz="0.0" izz="0.20"/>
+    </inertial>
+  </link>
+
+  <!-- Wheels (4WD Skid Steer) -->
+  <xacro:macro name="wheel" params="prefix x_reflect y_reflect">
+    <link name="${prefix}_wheel">
+      <visual>
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="${wheel_width}"/>
+        </geometry>
+        <material name="black">
+          <color rgba="0.15 0.15 0.15 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="${wheel_width}"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="0.6"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.002"/>
+      </inertial>
+    </link>
+
+    <joint name="${prefix}_wheel_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link="${prefix}_wheel"/>
+      <origin xyz="${x_reflect*chassis_length/2.5} ${y_reflect*(chassis_width/2 + wheel_width/2)} 0" rpy="${-pi/2} 0 0"/>
+      <axis xyz="0 0 1"/>
+    </joint>
+  </xacro:macro>
+
+  <xacro:wheel prefix="front_left" x_reflect="1" y_reflect="1" />
+  <xacro:wheel prefix="front_right" x_reflect="1" y_reflect="-1" />
+  <xacro:wheel prefix="rear_left" x_reflect="-1" y_reflect="1" />
+  <xacro:wheel prefix="rear_right" x_reflect="-1" y_reflect="-1" />
+
+  <!-- Camera & Thermal Mast -->
+  <link name="camera_mast_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.015" length="0.35"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.7 0.7 0.7 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="camera_mast_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="camera_mast_link"/>
+    <origin xyz="0.10 0 ${chassis_height + 0.175}" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Gazebo 4WD Skid-Steer Differential Drive Plugin -->
+  <gazebo>
+    <plugin name="skid_steer_drive" filename="libgazebo_ros_diff_drive.so">
+      <ros>
+        <namespace>/miners</namespace>
+      </ros>
+      <num_wheel_pairs>2</num_wheel_pairs>
+      <left_joint>front_left_wheel_joint</left_joint>
+      <right_joint>front_right_wheel_joint</right_joint>
+      <left_joint>rear_left_wheel_joint</left_joint>
+      <right_joint>rear_right_wheel_joint</right_joint>
+      <wheel_separation>${chassis_width + wheel_width}</wheel_separation>
+      <wheel_diameter>${2 * wheel_radius}</wheel_diameter>
+      <max_wheel_torque>20.0</max_wheel_torque>
+      <max_wheel_acceleration>5.0</max_wheel_acceleration>
+      <command_topic>cmd_vel</command_topic>
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <publish_wheel_tf>true</publish_wheel_tf>
+      <odometry_topic>odom</odometry_topic>
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_footprint</robot_base_frame>
+    </plugin>
+  </gazebo>
+
+</robot>
